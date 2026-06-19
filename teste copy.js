@@ -1,0 +1,10 @@
+<script>
+let n = prompt("Digite um numero de 1 a 7")
+if (n == 1) alert("Segunda-feira")
+if (n == 2) alert("Terca-feira")
+if (n == 3) alert("Quarta-feira")
+if (n == 4) alert("Quinta-feira")
+if (n == 5) alert("Sexta-feira")
+if (n == 6) alert("Sabado")
+if (n == 7) alert("Domingo")
+</script>
