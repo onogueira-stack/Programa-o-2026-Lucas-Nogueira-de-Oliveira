@@ -1,0 +1,11 @@
+A: <input type="number" id="a" value="5"> <br><br>
+B: <input type="number" id="b" value="20"> <br><br>
+C: <input type="number" id="c" value="10"> <br><br>
+<input type="button" value="Calcular" onclick="regra3()">
+<h1 id="res"></h1>
+<script>
+    function regra3() {
+        let x = (b.value * c.value) / a.value;
+        res.innerHTML = `X = ${x}`;
+    }
+</script>
