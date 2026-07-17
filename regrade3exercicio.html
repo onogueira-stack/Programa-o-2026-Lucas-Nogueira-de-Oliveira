@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Regras de 3</title>
+</head>
+<body>
+
+    <h1>Calculadora de Regras de 3</h1>
+
+    <input type="number" id="a"> ----- <input type="number" id="b"><br><br>
+    <input type="number" id="c"> ----- X<br><br>
+    
+    <button onclick="regra3()">Calcular x</button>
+
+    <h2 id="res"></h2>
+
+    <script>
+        function regra3() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let c = document.getElementById('c').value;
+            
+            let x = (b * c) / a;
+            
+            document.getElementById('res').innerHTML = "x é igual a " + x + ".";
+        }
+    </script>
+
+</body>
+</html>
