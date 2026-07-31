@@ -1,0 +1,27 @@
+<!-- Cria uma caixinha para digitar número. O id="a" serve para o JS achar ela depois -->
+<input type="number" id="a" value="3">
+
+<!-- Botão que pega o valor, joga na função x2 e mostra num alert antigo -->
+<input type="button" value="x 2 (alert)" onclick="alert(x2(a.value))">
+
+<!-- Botão moderno: chama a função que vai mudar o HTML da página usando o DOM -->
+<input type="button" value="x 2 (DOM)" onclick="multiplicaPor2()">
+
+<!-- Um título vazio que vai receber o resultado da multiplicação -->
+<h1 id="num"></h1>
+
+<script>
+    // Função simples que só multiplica o valor por 2
+    function x2(x) {
+        return 2 * x;
+    }
+
+    // Função que mexe no DOM da página
+    function multiplicaPor2() {
+        // Pega o que foi digitado na caixinha 'a' e multiplica por 2
+        let x = a.value * 2;
+        
+        // Altera o texto do h1 (id="num") para mostrar o resultado direto na tela!
+        num.innerHTML = `X = ${x}`; 
+    }
+</script>
