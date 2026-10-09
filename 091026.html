@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx-ext-json-enc@2.0.1/json-enc.js"></script>
+    <title>Acessando Endpoints API REST com HTMX</title>
+</head>
+<body hx-ext="json-enc">
+
+    <h2>1. Salvar Nome no Servidor (POST /nomes)</h2>
+    <form hx-post="https://ola-tp1.onrender.com/nomes" hx-target="#resultado-post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite um nome..." required>
+        <button type="submit">Salvar Nome</button>
+    </form>
+    <div id="resultado-post" style="margin-top: 10px;"></div>
+
+    <hr style="margin: 20px 0;">
+
+    <h2>2. Listar Nomes Armazenados (GET /nomes)</h2>
+    <button hx-get="https://ola-tp1.onrender.com/nomes" hx-target="#resultado-get" hx-trigger="click">
+        Mostrar Nomes Cadastrados
+    </button>
+    <div id="resultado-get" style="margin-top: 10px;"></div>
+
+    <hr style="margin: 20px 0;">
+
+    <h2>3. Verificar se Nome já Existe (GET /existe)</h2>
+    <form hx-get="https://ola-tp1.onrender.com/existe" hx-target="#resultado-existe">
+        <label for="nome-busca">Buscar Nome:</label>
+        <input type="text" id="nome-busca" name="nome" placeholder="Digite o nome para buscar..." required>
+        <button type="submit">Verificar Existência</button>
+    </form>
+    <div id="resultado-existe" style="margin-top: 10px;"></div>
+
+</body>
+</html>
